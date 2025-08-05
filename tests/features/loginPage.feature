@@ -1,5 +1,6 @@
 Feature: Valid Login Test
 
+@all
 Scenario Outline: Verfiy user is loged in with valid username and password
 Given I am in Swag labs login page
 When I login with username "<username>" and password "<password>"
