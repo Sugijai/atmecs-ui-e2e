@@ -3,7 +3,8 @@ let options = [
     "--require cucmber.config.ts",
     "--require tests/stepDefinitions/**/*.ts",
     "--parallel " + (process.env.PARALLEL || 1),
-    "--retry 2",
+    //"--retry 2",
+    "--dry-run",
     "--formate @cucumber/pretty-formatter",
     "--formate json:./reports/cucumber_repot.json",
     "--formate ./allureReportGenerator.js:summary"
