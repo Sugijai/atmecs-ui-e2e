@@ -1,5 +1,4 @@
 import { Page } from "playwright";
-import config from "../config";
 import { expect } from "@playwright/test";
 
 class ProductPage {
@@ -34,6 +33,10 @@ class ProductPage {
         //await this.page.pause();
         console.log(cartActualValue);
         await expect(cartActualValue).toEqual(countOfProduct);
+    }
+
+    async clickOnCart(){
+        await this.page.click(this.cart)
     }
 }
 

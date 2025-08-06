@@ -1,4 +1,4 @@
-import { Given, Then, When } from "@cucumber/cucumber";
+import { Then, When } from "@cucumber/cucumber";
 import { ProductPage } from "../pageObjects/ProductPage";
 
 When('I add the product {string}', async function (productName) {
