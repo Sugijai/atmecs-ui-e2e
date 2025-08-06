@@ -28,8 +28,12 @@ class ProductPage {
         await addToCartButton.click();
     }
 
-    async isCartCountUpdates(countOfProduct: number){
-        this.page.locator(`.//div[@id='shopping_cart_container']//span`);
+    async isCartCountUpdates(countOfProduct: string){
+        const cartCount = this.page.locator(`xpath=.//div[@id='shopping_cart_container']//span`);
+        var cartActualValue= await cartCount.textContent();
+        //await this.page.pause();
+        console.log(cartActualValue);
+        await expect(cartActualValue).toEqual(countOfProduct);
     }
 }
 

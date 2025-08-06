@@ -53,3 +53,10 @@ After(async function (Scenario) {
         }
     }
 });
+
+AfterStep(async function (step){
+    if(step.pickleStep.text.includes("verify") || step.pickleStep.text.includes("should be")){
+        const screenshot = await this.page.screenshot({ fullPage: true });
+       // this.attach(screenshot, "image/png");
+    }
+})
