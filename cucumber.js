@@ -3,7 +3,7 @@ let options = [
     "--require cucumber.config.ts",
     "--require tests/stepDefinitions/**/*.ts",
     "--parallel " + (process.env.PARALLEL || 1),
-    "--retry 1",
+    "--retry 0",
     //"--dry-run",
     "--format @cucumber/pretty-formatter",
     "--format json:./reports/cucumber_repot.json",

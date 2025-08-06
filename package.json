@@ -17,6 +17,7 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "all-test": "cucumber-js -p test_runner --tags @all"
+    "all-test": "cucumber-js -p test_runner --tags @all",
+    "allure-report": "npx allure generate ./reports/allure-results --clean --single-file -o ./reports/allure-report"
   }
 }
